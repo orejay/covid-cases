@@ -26,7 +26,28 @@ function Covid() {
             <div className='case-bx'><div className='hd-title'>Discharged Cases</div><div className='hd-number'>{covidData.data.data.totalSamplesTested}</div></div>
             <div className='case-bx'><div className='hd-title'>Death</div><div className='hd-number'>{covidData.data.data.totalSamplesTested}</div></div>
         </div>
-        </div> : null}
+        </div> : null
+    }
+    {
+        !covidData.loading &&
+        covidData.data ? 
+        <div id='content'>
+            <h1>Cases by State</h1>
+            <div id='states'>
+                {covidData.data.data.states.map((state)=>(
+                    <div className='state-data'>
+                        <h2 id='state-name'>{state.state}</h2>
+                        <div>
+                            <p>Confirmed cases: {state.confirmedCases}</p>
+                            <p>Cases on admission: {state.casesOnAdmission}</p>
+                            <p>Discharged: {state.discharged}</p>
+                            <p>Deaths: {state.death}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div> : null
+    }
     </div>
     </div>
     )

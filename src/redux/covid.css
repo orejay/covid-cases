@@ -63,3 +63,47 @@ h1 {
     background-color: #ff0000;
     box-shadow: 0 0 4px #888;
 }
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Product Sans';
+}
+
+#states {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: auto;
+    margin-left: 20PX;
+}
+
+#state-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.state-data {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 18.2%;
+    height: 230px;
+    margin: 10px;
+    box-shadow: 0 0 4px #888;
+    font-family: inherit;
+    background: linear-gradient(to bottom, #0492c2, #138750);
+    color: azure;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
