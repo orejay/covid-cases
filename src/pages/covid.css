@@ -1,7 +1,12 @@
+body {
+    background-color: whitesmoke;
+}
+
 #head {
     display: flex;
     flex-direction: column;
     font-family: 'Product Sans';
+    background-color: inherit;
 }
 
 h1 {
@@ -12,7 +17,6 @@ h1 {
 
 #hd-stat {
     display: flex;
-    background-color: white;
     justify-content: space-evenly;
     flex-wrap: wrap;
     font-family: 'Product Sans';
@@ -89,21 +93,33 @@ h1 {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    width: 18.2%;
-    height: 230px;
+    width: 23%;
+    height: 300px;
     margin: 10px;
     box-shadow: 0 0 4px #888;
     font-family: inherit;
-    background: linear-gradient(to bottom, #0492c2, #138750);
-    color: azure;
+    background-color: #ffc82d;
+    color: black;
+    cursor: pointer;
+}
+
+.state-data:hover {
+    transition: 0.2s ease-in-out;
+    box-shadow: 2px 3px 8px #888;
 }
 
 p {
     padding: 0;
     margin: 0;
     margin-left: 10px;
-    margin-bottom: 3px;
+    margin-bottom: 20px;
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 0.5px;
+}
+
+p span {
+    color: red;
+    font-size: 30px;
+    font-weight: 700;
 }

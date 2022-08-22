@@ -1,20 +1,4 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchCovidCases } from './covidCasesSlice'
-import './covid.css'
-
-function Covid() {
-    const covidData = useSelector((state)=>state.data)
-    const dispatch = useDispatch()
-    useEffect(()=>{
-        dispatch(fetchCovidCases())
-    },[dispatch])    
-    return (
-    <div>
-    <div>
-    {covidData.loading && <h1>Loading...</h1>}
-    {!covidData.loading && covidData.error ? <h1>{covidData.error}</h1> : null}
+{/* {!covidData.loading && covidData.error ? <h1>{covidData.error}</h1> : null}
     {
         !covidData.loading && 
         covidData.data ? <div id='head'>
@@ -47,10 +31,4 @@ function Covid() {
                 ))}
             </div>
         </div> : null
-    }
-    </div>
-    </div>
-    )
-}
-
-export default Covid
+    } */}
